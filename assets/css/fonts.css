@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "TTCommonsRegular"; 
+    src: url("../fonts/TT-Commons-Regular/TTCommons-Regular.eot"); 
+    src: url("../fonts/TT-Commons-Regular/TTCommons-Regular.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/TT-Commons-Regular/TTCommons-Regular.woff2") format("woff2"), 
+         url("../fonts/TT-Commons-Regular/TTCommons-Regular.woff") format("woff"), 
+         url("../fonts/TT-Commons-Regular/TTCommons-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+@font-face {
+    font-family: "RedCollarRegular"; 
+    src: url("../fonts/RedCollar-Regular/Redcollar.otf"); 
+    src: url("../fonts/RedCollar-Regular/Redcollar.woff2") format("woff2"), 
+         url("../fonts/RedCollar-Regular/Redcollar.woff") format("woff");
+    font-style: normal; 
+    font-weight: normal; 
+}
