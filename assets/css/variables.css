@@ -2,4 +2,7 @@
     --main-clr: #000000;
     --accent-clr: #F51B1B;
     --text-clr: #FFFFFF;
+    --text-greyish-clr: #ffffff50;
+    --font-commons: 'TTCommonsRegular', sans-serif;
+    --font-collar: 'RedCollarRegular', sans-serif;
 }
