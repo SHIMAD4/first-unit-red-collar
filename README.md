@@ -4,11 +4,11 @@
 
 1. [**validator.w3.org**](https://validator.w3.org/#validate_by_input)
 
-    ![validator](image.png)
+    <img src="./assets/img/readme%20images/w3.png">
 
 2. [**БЭМ валидация**](https://yoksel.github.io/html-tree/)
 
-    ![validator](yoksel.github.io_html-tree_.png)
+    <img src="./assets/img/readme%20images/tree.png" width="300px">
 
 ## Дизайн
 
@@ -16,7 +16,7 @@
 
 * 1440px
 
-    ![1440px](1440.png)
+    <img src="./assets/img/readme%20images/1440.png">
 * 360px 
 
-    ![360px](360.png)
+    <img src="./assets/img/readme%20images/360.png">
