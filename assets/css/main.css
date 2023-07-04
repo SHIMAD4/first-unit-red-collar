@@ -1,7 +1,6 @@
 @import url("./variables.css");
 @import url("./fonts.css");
 
-
 /* === MAIN === */
 *, *::before, *::after {
     margin: 0;
@@ -30,6 +29,12 @@ h4, h5, h6, p {
     clip: rect(0 0 0 0);
 }
 
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 640px .5fr 1fr;
+}
+
 .wrapper {
     width: 100%;
     max-width: 320px;
@@ -45,9 +50,6 @@ h4, h5, h6, p {
 .contact-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 250px;
 }
 .contact-section__avatar {
     width: fit-content;
@@ -73,7 +75,6 @@ h4, h5, h6, p {
     border-radius: 20px 20px 0px 0px;
     position: absolute;
     top: 450px;
-
 }
 .contact-section__about > p:first-child {
     font-size: 20px;
@@ -111,33 +112,45 @@ h4, h5, h6, p {
 /* === DESCRIPTION SECTION === */
 .description-section__text {
     margin-bottom: 24px;
+    margin-top: 40px;
     font-weight: 400;
     font-size: 16px;
     font-family: var(--font-commons);
     line-height: 20px;
 }
+.description-section__link {
+    display: none;
+    scale: 0;
+    visibility: hidden;
+}
 
 /* === ABOUT SECTION === */
 .about-section {
-    width: 100%;
-    max-width: 320px;
-    height: fit-content;
+    min-height: 555px;
     margin-bottom: 58px;
     background-color: transparent;
     border: 20px solid;
     border-image-source: url("../img/icons/info-mobile.svg");
     border-image-slice: 20;
 }
+.about-section__block {
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--text-greyish-clr);
+}
+.about-section__block:last-child {
+    border-bottom: none;
+}
+.about-section__block:not(:first-child) {
+    margin-top: 24px;
+}
 .about-section__list {
     color: white;
     list-style-type: none;
-    margin-bottom: 24px;
 }
-.about-section__list:not(:first-child) {
-    margin-top: 24px;
-}
-.about-section__list:last-child > li:last-child {
+.about-section__block:last-child >
+.about-section__list > li {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 .about-section__list:last-child > li:last-child > p {
@@ -149,11 +162,110 @@ h4, h5, h6, p {
     line-height: 20px;
     margin-bottom: 12px;
 }
-.about-section__list__item--heading {
+.about-section__heading {
     font-size: 24px;
     font-family: var(--font-collar);
     margin-bottom: 16px;
+    font-weight: 400;
 }
 .about-section__list__item > p:not(:nth-child(4n+1)) {
     color: var(--text-greyish-clr);
+}
+
+@media screen and (min-width: 1440px) {
+    /* === MAIN === */
+    .wrapper {
+        max-width: 1360px;
+    }
+    .main {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: none;
+        grid-template-areas: 'contact about'
+                             'contact bio';
+        column-gap: 31px;
+        margin-right: 40px;
+    }
+    /* === HEADER === */
+    .header {
+        margin: 26px auto 8px;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .header__link {
+        display: none;
+        scale: 0;
+        visibility: hidden;
+    }
+    /* === CONTACT SECTION === */
+    .contact-section {
+        justify-content: normal;
+        align-items: normal;
+        grid-area: contact;
+        margin-left: 40px;
+    }
+    .contact-section__avatar__arrow {
+        position: absolute;
+        top: 421px;
+    }
+    .contact-section__about {
+        max-width: 322px;
+        padding: 40px 24px 158px;
+        border-radius: 24px 24px 0px 0px;
+        top: 440px;
+    }
+    .contact-section__about > p:first-child {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 8px;
+    }
+    .contact-section__about > p:nth-child(2) {
+        font-size: 20px;
+        line-height: 24px;
+        font-family: var(--font-commons);
+        margin-bottom: 40px;
+    }
+    .contact-section__about__list__item {
+        margin-bottom: 20px;
+    }
+    .contact-section__about__list__item > a {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    /* === DESCRIPTION SECTION === */
+    .description-section {
+        grid-area: about;
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .description-section__text {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 32px 76px 32px 0px;
+    }
+    .description-section__link {
+        display: inline;
+        scale: 1;
+        visibility: visible;
+    }
+    /* === ABOUT SECTION === */
+    .about-section {
+        grid-area: bio;
+        border-image-source: url("../img/icons/info.svg");
+        margin-bottom: 40px;
+    }
+    .about-section__block {
+        display: flex;
+    }
+    .about-section__list:last-child > li:last-child {
+        flex-wrap: nowrap;
+    }
+    .about-section__heading {
+        flex-basis: 250px;
+    }
+    .about-section__list__item {
+        flex-basis: 400px;
+    }
+
 }

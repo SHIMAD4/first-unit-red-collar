@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О себе</title>
-    <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
 </head>
 <body>
     <header class="header wrapper">
@@ -14,7 +14,7 @@
             <img class="header__logo" src="./assets/img/logo.png" alt="logo">
         </a>
     </header>
-    <main>
+    <main class="main">
         <section class="contact-section wrapper">
             <h2 class="visually-hidden">Контактная информация</h2>
             <div class="contact-section__avatar">
@@ -47,6 +47,9 @@
         </section>
         <section class="description-section wrapper">
             <h2 class="visually-hidden">Приветствие</h2>
+            <a class="description-section__link" href="index.html">
+                <img class="description-section__logo" src="./assets/img/logo.png" alt="logo">
+            </a>
             <p class="description-section__text">Здравствуй!
                 Меня зовут Виталий, Рад познакомиться! Я начинающий frontend-разработчик с широким набором технологий в своем арсенале. В моих навыках включены HTML, CSS (в том числе SCSS/SASS), JavaScript и я также изучаю библиотеку React, в том числе Next.js.
                 Однако, я не ограничиваюсь только WEB-индустрией. Я всегда стремлюсь к развитию и открыт новым возможностям в любой сфере (недавно освоил просмотр роликов с котиками на уровне мидла). Мои способности быстро находить решения и внимательность помогают мне преодолевать любые трудности.
@@ -55,49 +58,53 @@
         </section>
         <section class="about-section wrapper">
             <h2 class="visually-hidden">Информация о себе</h2>
-            <ul class="about-section__list">
-                <li class="about-section__list__item about-section__list__item--heading">Образование</li>
-                <li class="about-section__list__item">
-                    <p>Московский политехнический университет</p>
-                    <p>Веб-технологии (Информатика и вычислительная техника)</p>
-                    <p>2022-2026</p>
-                </li>
-                <li class="about-section__list__item">
-                    <p>FructCode (Курсы)</p>
-                    <p>Frontend-технологии</p>
-                    <p>2021</p>
-                </li>
-            </ul>
-            <hr>
-            <ul class="about-section__list">
-                <li class="about-section__list__item about-section__list__item--heading">Карьера</li>
-                <li class="about-section__list__item">
-                    <p>StudentWords</p>
-                    <p>React-разработчик</p>
-                    <p>2022-2023</p>
-                </li>
-                <li class="about-section__list__item">
-                    <p>Заказы от наставника</p>
-                    <p>Frontend-разработчик</p>
-                    <p>2021</p>
-                </li>
-            </ul>
-            <hr>
-            <ul class="about-section__list">
-                <li class="about-section__list__item about-section__list__item--heading">Навыки</li>
-                <li>
-                    <p class="about-section__list__item">HTML</p>
-                    <p class="about-section__list__item">CSS</p>
-                    <p class="about-section__list__item">SCSS/SASS</p>
-                    <p class="about-section__list__item">JavaScript</p>
-                    <p class="about-section__list__item">React</p>
-                    <p class="about-section__list__item">Python</p>
-                    <p class="about-section__list__item">Django</p>
-                    <p class="about-section__list__item">PHP</p>
-                    <p class="about-section__list__item">MySQL</p>
-                    <p class="about-section__list__item">Bootstrap3</p>
-                </li>
-            </ul>
+            <div class="about-section__block">
+                <h2 class="about-section__heading">Образование</h2>
+                <ul class="about-section__list">
+                    <li class="about-section__list__item about-section__list__item">
+                        <p>Московский политехнический университет</p>
+                        <p>Веб-технологии (Информатика и вычислительная техника)</p>
+                        <p>2022-2026</p>
+                    </li>
+                    <li class="about-section__list__item about-section__list__item">
+                        <p>FructCode (Курсы)</p>
+                        <p>Frontend-технологии</p>
+                        <p>2021</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="about-section__block">
+                <h2 class="about-section__heading">Карьера</h2>
+                <ul class="about-section__list">
+                    <li class="about-section__list__item">
+                        <p>StudentWords</p>
+                        <p>React-разработчик</p>
+                        <p>2022-2023</p>
+                    </li>
+                    <li class="about-section__list__item">
+                        <p>Заказы от наставника</p>
+                        <p>Frontend-разработчик</p>
+                        <p>2021</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="about-section__block">
+                <h2 class="about-section__heading">Навыки</h2>
+                <ul class="about-section__list">
+                    <li>
+                        <p class="about-section__list__item">HTML</p>
+                        <p class="about-section__list__item">CSS</p>
+                        <p class="about-section__list__item">SCSS/SASS</p>
+                        <p class="about-section__list__item">JavaScript</p>
+                        <p class="about-section__list__item">React</p>
+                        <p class="about-section__list__item">Python</p>
+                        <p class="about-section__list__item">Django</p>
+                        <p class="about-section__list__item">PHP</p>
+                        <p class="about-section__list__item">MySQL</p>
+                        <p class="about-section__list__item">Bootstrap3</p>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 </body>
